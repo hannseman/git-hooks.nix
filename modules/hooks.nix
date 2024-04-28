@@ -1374,6 +1374,13 @@ in
                 default = [ ];
                 example = [ "flake.nix" "_*" ];
               };
+            disabled =
+              mkOption {
+                type = types.listOf types.str;
+                description = lib.mdDoc "Lints and fixes to be disabled.";
+                default = [ ];
+                example = ["empty_pattern"];
+              };
           };
         };
       };
